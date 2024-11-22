@@ -170,7 +170,7 @@
   .text-img figure {
     padding-left: 0; }
 
-  .cards-slider-block {
+  .cards-slider-block, .knowledge-3x {
     margin-left: 12px;
     margin-right: 12px; }
 
@@ -250,7 +250,19 @@
     margin-top: 50px; }
 
   .knowledge .item {
-    width: calc(50% - 8px); } }
+    width: calc(50% - 8px); }
+
+  .header-blue .open-menu a span {
+    background: #002846; }
+
+  .text-default h2 {
+    font-size: 34px; }
+
+  .text-default h3 {
+    font-size: 28px; }
+
+  .text-default .quote-block blockquote {
+    font-size: 24px; } }
 @media (max-width: 991px) {
   .home-banner .text {
     width: 100%; }
@@ -462,7 +474,10 @@
 
   .cta-block .img-wrap {
     min-height: auto;
-    height: 270px; } }
+    height: 270px; }
+
+  .knowledge-3x .item:nth-child(3) {
+    display: none; } }
 @media (max-width: 767px) {
   .nav-wrap .swiper-pagination {
     display: none; }
@@ -567,6 +582,24 @@
     min-height: fit-content; }
 
   .knowledge .item {
+    width: 100%; }
+
+  .services-banner figure {
+    min-height: auto; }
+
+  .img-full-slider .swiper-slide img {
+    height: 350px; }
+
+  .text-default .download-block .wrap {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important; }
+
+  .text-default .download-block .form-wrap {
+    width: 100%;
+    margin-top: 20px; }
+
+  .text-default .download-block .text-form {
     width: 100%; } }
 @media (max-width: 575px) {
   header .btn-wrap {
@@ -784,6 +817,43 @@
     width: 100%; }
 
   .form-search {
-    grid-gap: 10px; } }
+    grid-gap: 10px; }
+
+  .knowledge-3x .item:nth-child(3) {
+    display: block; }
+
+  .text-default .quote-block {
+    display: block !important; }
+
+  .text-default .quote-block .text {
+    width: 100%;
+    padding: 20px 30px 20px 30px; }
+
+  .text-default .quote-block .icon-wrap {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    left: 86px;
+    top: 10px; }
+
+  .text-default .quote-block blockquote {
+    font-size: 22px; }
+
+  .text-default .quote-block figure {
+    width: 100px;
+    height: 150px;
+    float: left;
+    margin: 0 15px 5px 0; }
+
+  .bottom-link {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important; }
+
+  .knowledge-3x .bg img {
+    display: none; }
+
+  .knowledge-3x {
+    padding: 50px 0; } }
 
 /*# sourceMappingURL=responsive.css.map */

@@ -182,4 +182,13 @@ jQuery(document).ready(function ($) {
       $(this).parent('.accordion-item').toggleClass("is-active").children(".accordion-panel").slideToggle("ease-out");
     })
   });
+
+  //slider
+  var swiperImgFull = new Swiper(".img-full-slider", {
+    loop:true,
+    navigation: {
+      nextEl: ".img-full-next",
+      prevEl: ".img-full-prev",
+    },
+  });
 });
