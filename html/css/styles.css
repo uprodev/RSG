@@ -676,6 +676,30 @@ header {
     .cta-block .info-cta .title {
       color: #fff;
       margin-bottom: -2px; }
+    .cta-block .info-cta .title-h4 {
+      font-size: 26px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.3;
+      letter-spacing: normal;
+      text-align: left;
+      color: #fff;
+      margin-bottom: 10px; }
+    .cta-block .info-cta .btn-wrap {
+      margin-bottom: 20px; }
+      .cta-block .info-cta .btn-wrap .link-tel {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        color: #fff; }
+        .cta-block .info-cta .btn-wrap .link-tel i {
+          margin-right: 10px; }
+        .cta-block .info-cta .btn-wrap .link-tel:hover {
+          color: #ff6b35; }
     .cta-block .info-cta p {
       color: #fff;
       margin-bottom: 20px; }
@@ -1567,6 +1591,8 @@ footer {
       letter-spacing: normal;
       text-align: left;
       color: #cbd8d7; }
+  footer .bottom {
+    max-width: calc(100% - 24px); }
 
 .soc-list {
   display: -webkit-box;
@@ -1934,6 +1960,9 @@ footer {
 
 .small-contact-block + .cards-slider-block {
   margin-top: 150px; }
+
+.cards-slider-block + .text-img {
+  margin-top: -100px; }
 
 /*------------------END-SMALL-CONTACT-BLOCK-----------------------------*/
 /*-----------------------FAQ-----------------------------*/
@@ -2645,6 +2674,9 @@ footer {
       .bottom-link .soc-list a:hover {
         background-color: #40409f; }
 
+.text-default .download-block .text-form p a:hover {
+  opacity: 0.7; }
+
 /*-------------------END-TEXT-DEFAULT----------------------------*/
 /*-------------------KNOWLEDGE-3X----------------------------*/
 .knowledge-3x {
@@ -2668,6 +2700,213 @@ footer {
     margin-bottom: 45px; }
 
 /*------------------END-KNOWLEDGE-3X----------------------------*/
+/*---------------------CONTACT-BANNER-------------------------*/
+.contact-banner {
+  padding-top: 179px; }
+  .contact-banner .bg {
+    bottom: 170px; }
+  .contact-banner h1 {
+    font-size: 60px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.17;
+    margin-bottom: 2px;
+    height: auto; }
+  .contact-banner .list-contact {
+    margin-bottom: 34px; }
+    .contact-banner .list-contact li {
+      margin-bottom: 1px;
+      color: #fff; }
+      .contact-banner .list-contact li a {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        font-size: 18px;
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.78;
+        color: #fff; }
+        .contact-banner .list-contact li a i {
+          margin-right: 10px;
+          font-size: 16px; }
+        .contact-banner .list-contact li a:hover {
+          color: #ff6b35; }
+  .contact-banner p {
+    margin-bottom: 22px; }
+  .contact-banner .list-info li {
+    margin-bottom: 1px;
+    color: #fff; }
+  .contact-banner .right {
+    padding-top: 21px; }
+  .contact-banner .wrap-bg {
+    border-radius: 20px;
+    -webkit-box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.16);
+            box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.16);
+    background-color: #fff;
+    overflow: hidden; }
+    .contact-banner .wrap-bg .top {
+      position: relative;
+      padding: 40px 40px 20px 260px;
+      background-color: #f0f2f7;
+      overflow: hidden;
+      min-height: 130px; }
+      .contact-banner .wrap-bg .top .img-wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 234px; }
+        .contact-banner .wrap-bg .top .img-wrap img {
+          width: 100%;
+          height: 100%;
+          -o-object-fit: cover;
+             object-fit: cover;
+          border-radius: 0 60% 0 0;
+          -o-object-position: top center;
+             object-position: top center; }
+    .contact-banner .wrap-bg h3 {
+      font-size: 28px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.21;
+      margin: 0; }
+  .contact-banner .form-wrap {
+    padding: 45px 50px 35px; }
+    .contact-banner .form-wrap input, .contact-banner .form-wrap textarea {
+      background-color: #f0f2f7; }
+    .contact-banner .form-wrap textarea {
+      height: 121px; }
+  .contact-banner .text-form p, .contact-banner .text-form p a {
+    color: #000; }
+
+/*--------------------END-CONTACT-BANNER-------------------------*/
+/*--------------------CONTACT-MAP-------------------------*/
+.contact-map {
+  padding: 60px 0 122px; }
+  .contact-map .wrap {
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: rgba(231, 233, 246, 0.67); }
+  .contact-map .text {
+    padding: 82px 40px 50px 70px; }
+  .contact-map .label {
+    margin-bottom: 1px; }
+  .contact-map h2 {
+    margin-bottom: 15px; }
+  .contact-map p {
+    font-size: 20px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: left;
+    color: #002846;
+    margin-bottom: 22px; }
+    .contact-map p b {
+      font-weight: 700; }
+
+#map {
+  height: 457px; }
+
+div#map a,
+div#map button,
+div.gm-bundled-control div.gmnoprint {
+  display: none !important; }
+
+/*-------------------END-CONTACT-MAP-------------------------*/
+/*-------------------VACANCIES-BANNER------------------------*/
+.vacancies-banner figure {
+  min-height: 500px; }
+
+.vacancies-banner {
+  margin-bottom: 16px; }
+  .vacancies-banner .text {
+    margin-bottom: 80px; }
+
+.vacancies-banner-category {
+  margin-bottom: 10px; }
+  .vacancies-banner-category .text {
+    margin-bottom: 95px; }
+
+/*------------------END-VACANCIES-BANNER------------------------*/
+/*-------------------VACANCIES-------------------------*/
+.vacancies .item {
+  position: relative; }
+  .vacancies .item figure {
+    height: 190px; }
+  .vacancies .item ul {
+    margin-top: 10px; }
+    .vacancies .item ul li {
+      margin-bottom: 10px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .vacancies .item ul li i {
+        margin-right: 10px;
+        font-size: 16px;
+        color: #ff6b35; }
+    .vacancies .item ul li:last-child {
+      margin-bottom: 0; }
+  .vacancies .item .icon-wrap {
+    position: absolute;
+    z-index: 10;
+    top: 153px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    opacity: 0; }
+    .vacancies .item .icon-wrap i {
+      font-size: 35px;
+      line-height: 1;
+      color: #fff;
+      -webkit-transition: all .4s ease;
+      transition: all .4s ease; }
+    .vacancies .item .icon-wrap a {
+      border: solid 5px #fff;
+      background-color: #ff6b35;
+      width: 76px;
+      height: 76px;
+      border-radius: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .vacancies .item .icon-wrap a:hover i {
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg); }
+  .vacancies .item:hover .icon-wrap {
+    opacity: 1; }
+.vacancies .item .text h6 {
+  min-height: 20px !important;
+  font-size: 26px;
+  margin-bottom: 3px; }
+.vacancies .cta-block {
+  margin: 26px 0 50px; }
+  .vacancies .cta-block .btn-wrap {
+    margin-top: 15px; }
+  .vacancies .cta-block .img-wrap {
+    min-height: 250px; }
+
+/*------------------END-VACANCIES-------------------------*/
 .mb-290 {
   margin-bottom: 290px; }
 
@@ -2691,4 +2930,14 @@ footer {
 .bg-lightblue ul li {
   color: #002846; }
 
+.cards-slider-block.bg-white h2, .cards-slider-block.bg-white h3 {
+  color: #002846; }
+.cards-slider-block.bg-white .btn-border {
+  color: #002846;
+  border-color: #002846; }
+  .cards-slider-block.bg-white .btn-border:hover {
+    background: #002846;
+    color: #fff; }
+.cards-slider-block.bg-white .cards-slider .swiper-slide {
+  background: rgba(13, 33, 121, 0.06); }
 /*# sourceMappingURL=styles.css.map */

@@ -770,6 +770,31 @@ header{
       color: #fff;
       margin-bottom: -2px;
     }
+    .title-h4{
+      font-size: 26px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.3;
+      letter-spacing: normal;
+      text-align: left;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .btn-wrap{
+      margin-bottom: 20px;
+      .link-tel{
+        display: flex;
+        align-items: center;
+        color: #fff;
+        i{
+          margin-right: 10px;
+        }
+        &:hover{
+          color: $orange;
+        }
+      }
+    }
     p{
       color: #fff;
       margin-bottom: 20px;
@@ -1742,6 +1767,9 @@ footer{
       }
     }
   }
+  .bottom{
+    max-width: calc(100% - 24px);
+  }
 }
 
 .soc-list{
@@ -2128,7 +2156,9 @@ footer{
 .small-contact-block + .cards-slider-block{
   margin-top: 150px;
 }
-
+.cards-slider-block + .text-img{
+  margin-top: -100px;
+}
 /*------------------END-SMALL-CONTACT-BLOCK-----------------------------*/
 /*-----------------------FAQ-----------------------------*/
 
@@ -2931,6 +2961,9 @@ footer{
     }
   }
 }
+.text-default .download-block .text-form p a:hover{
+  opacity: 0.7;
+}
 /*-------------------END-TEXT-DEFAULT----------------------------*/
 /*-------------------KNOWLEDGE-3X----------------------------*/
 .knowledge-3x{
@@ -2962,6 +2995,249 @@ footer{
   }
 }
 /*------------------END-KNOWLEDGE-3X----------------------------*/
+/*---------------------CONTACT-BANNER-------------------------*/
+.contact-banner{
+  padding-top: 179px;
+  .bg{
+    bottom: 170px;
+  }
+  h1{
+    font-size: 60px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.17;
+    margin-bottom: 2px;
+    height: auto;
+  }
+  .list-contact{
+    margin-bottom: 34px;
+    li{
+      margin-bottom: 1px;
+      color: #fff;
+      a{
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        font-size: 18px;
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.78;
+        color:#fff;
+        i{
+          margin-right: 10px;
+          font-size: 16px;
+        }
+        &:hover{
+          color: $orange
+        }
+      }
+    }
+  }
+  p{
+    margin-bottom: 22px;
+  }
+  .list-info{
+    li{
+      margin-bottom: 1px;
+      color: #fff;
+    }
+  }
+  .right{
+    padding-top: 21px;
+  }
+  .wrap-bg{
+    border-radius: 20px;
+    box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.16);
+    background-color: #fff;
+    overflow: hidden;
+    .top{
+      position: relative;
+      padding: 40px 40px 20px 260px;
+      background-color: #f0f2f7;
+      overflow:hidden;
+      min-height: 130px;
+      .img-wrap{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 234px;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 0 60% 0 0;
+          object-position: top center;
+        }
+      }
+    }
+    h3{
+      font-size: 28px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.21;
+      margin: 0;
+    }
+  }
+  .form-wrap{
+    padding: 45px 50px 35px;
+    input, textarea{
+      background-color: #f0f2f7;
+    }
+    textarea{
+      height: 121px;
+    }
+  }
+  .text-form p, .text-form p a{
+    color: #000;
+  }
+}
+/*--------------------END-CONTACT-BANNER-------------------------*/
+/*--------------------CONTACT-MAP-------------------------*/
+.contact-map{
+  padding: 60px 0 122px;
+  .wrap{
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: rgba(#e7e9f6, 0.67);
+
+  }
+  .text{
+    padding: 82px 40px 50px 70px;
+  }
+  .label{
+    margin-bottom: 1px;
+  }
+  h2{
+    margin-bottom: 15px;
+  }
+  p{
+    font-size: 20px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-align: left;
+    color: #002846;
+    margin-bottom: 22px;
+    b{
+      font-weight: 700;
+    }
+  }
+}
+#map{
+  height: 457px;
+}
+
+div#map a,
+div#map button,
+div.gm-bundled-control div.gmnoprint {
+  display: none !important;
+}
+/*-------------------END-CONTACT-MAP-------------------------*/
+/*-------------------VACANCIES-BANNER------------------------*/
+.vacancies-banner figure {
+  min-height: 500px;
+}
+.vacancies-banner{
+  margin-bottom: 16px;
+  .text{
+    margin-bottom: 80px;
+  }
+}
+.vacancies-banner-category{
+  margin-bottom: 10px;
+  .text{
+    margin-bottom: 95px;
+  }
+}
+/*------------------END-VACANCIES-BANNER------------------------*/
+/*-------------------VACANCIES-------------------------*/
+.vacancies{
+  .item{
+    position: relative;
+    figure{
+      height: 190px;
+    }
+    ul{
+      margin-top: 10px;
+      li{
+        margin-bottom: 10px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        i{
+          margin-right: 10px;
+          font-size: 16px;
+          color: #ff6b35;
+        }
+      }
+      li:last-child{
+        margin-bottom: 0;
+      }
+    }
+    .icon-wrap{
+      position: absolute;
+      z-index: 10;
+      top: 153px;
+      left: 50%;
+      transform: translate(-50%,0);
+      transition: all .4s ease;
+      opacity: 0;
+      i{
+        font-size: 35px;
+        line-height: 1;
+        color: #fff;
+        transition: all .4s ease;
+      }
+      a{
+        border: solid 5px #fff;
+        background-color: $orange;
+        width: 76px;
+        height: 76px;
+        border-radius: 100%;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        &:hover{
+          i{
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+    &:hover{
+      .icon-wrap{
+        opacity: 1;
+      }
+    }
+  }
+  .item .text h6{
+    min-height: 20px!important;
+    font-size: 26px;
+    margin-bottom: 3px;
+  }
+  .cta-block {
+    margin: 26px 0 50px;
+    .btn-wrap{
+      margin-top: 15px;
+    }
+    .img-wrap{
+      min-height: 250px;
+    }
+  }
+}
+/*------------------END-VACANCIES-------------------------*/
 .mb-290{
   margin-bottom: 290px;
 }
@@ -2991,6 +3267,23 @@ footer{
   }
   ul li{
     color: #002846;
+  }
+}
+
+.cards-slider-block.bg-white{
+  h2, h3{
+    color: #002846;
+  }
+  .btn-border{
+    color: #002846;
+    border-color: #002846;
+    &:hover{
+      background: #002846;
+      color: #fff;
+    }
+  }
+  .cards-slider .swiper-slide{
+    background: rgba(#0D2179, 0.06);
   }
 }
 
