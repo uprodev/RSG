@@ -191,4 +191,25 @@ jQuery(document).ready(function ($) {
       prevEl: ".img-full-prev",
     },
   });
+
+
+  //fix-block
+  $('.text-default-aside .aside').fixTo('.text-default-aside .content', {
+    top: 100,
+    useNativeSticky:true
+  });
+
+  //file add
+  $('input[type="file"]').change(function(e) {
+    var file = e.target.files[0].name;
+    $(this).closest('.input-wrap-file').addClass('is-select').find('p.info').text(file).show();
+  });
+
+  //clear input
+  $(document).on('click', '.clear-file', function (e){
+    e.preventDefault();
+    $(this).closest('.input-wrap-file').removeClass('is-select').find('input').val('');
+    $(this).closest('.input-wrap-file').find('.clear-file').hide();
+    $(this).closest('.input-wrap-file').find('p.info').hide();
+  });
 });

@@ -13,8 +13,8 @@
   .knowledge-banner.full-img figure img {
     width: calc(100% + 200px);
   }
-  main {
-    overflow-x: hidden;
+  .block-404{
+    min-height: 650px;
   }
 }
 @media (max-width: 1399px){
@@ -28,9 +28,7 @@
   .services-banner figure:after {
     right: calc((1140px - 100vw) / 2);
   }
-  main{
-    overflow-x: hidden;
-  }
+
   .knowledge .item .text h6 {
     font-size: 25px;
     min-height: 65px;
@@ -306,6 +304,15 @@
     font-size: 50px;
     height: auto!important;
   }
+  .services-banner figure{
+    min-height: 400px;
+  }
+  .text-default .content .form-wrap{
+    padding: 25px;
+  }
+  .text-default .content .form-wrap h3{
+    font-size: 28px;
+  }
 }
 
 @media (max-width:991px) {
@@ -517,7 +524,33 @@
     display: flex;
     align-items: center;
   }
-
+  .text-default-aside .left{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .text-default-aside .aside{
+    width: 100%;
+    position: relative!important;
+    top: 0!important;
+  }
+  .text-default{
+    padding: 35px 0 50px;
+  }
+  .block-404 .bg .img{
+    width: 70px;
+  }
+  .block-404 .bg .img-1{
+    left: 0;
+  }
+  .block-404 .bg .img-2{
+    right: 0;
+  }
+  .block-404 .bg{
+    bottom: 0;
+  }
+  .block-404 h1{
+    font-size: 40px;
+  }
 }
 
 @media (max-width:767px) {
@@ -950,5 +983,21 @@
   }
   .knowledge {
     padding: 50px 0 50px;
+  }
+  .text-default-aside .aside {
+    padding: 25px 20px 300px;
+  }
+  .text-default .content .form-wrap{
+    margin: 40px 0;
+  }
+  .block-404 .bg .img-1{
+    left: 12px;
+    top: 60px;
+  }
+  .block-404 .bg .img-2{
+    right: 12px;
+  }
+  .block-404 p{
+    font-size: 16px;
   }
 }
