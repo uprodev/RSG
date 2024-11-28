@@ -2934,6 +2934,9 @@ footer{
         color: #000;
         a{
           color: #000;
+          &:hover{
+            opacity: 0.7;
+          }
         }
       }
     }
@@ -3162,6 +3165,9 @@ footer{
   }
   .text-form p, .text-form p a{
     color: #000;
+    &:hover{
+      opacity: 0.7;
+    }
   }
 }
 /*--------------------END-CONTACT-BANNER-------------------------*/
@@ -3206,6 +3212,9 @@ div#map a,
 div#map button,
 div.gm-bundled-control div.gmnoprint {
   display: none !important;
+}
+div#map{
+  text-align: center;
 }
 /*-------------------END-CONTACT-MAP-------------------------*/
 /*-------------------VACANCIES-BANNER------------------------*/

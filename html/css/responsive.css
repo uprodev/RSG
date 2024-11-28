@@ -12,7 +12,10 @@
     width: calc(100% + 200px); }
 
   .block-404 {
-    min-height: 650px; } }
+    min-height: 650px; }
+
+  .text-default-aside .aside {
+    padding: 30px 25px 300px; } }
 @media (max-width: 1399px) {
   .contact-block .text {
     padding-right: 60px; }

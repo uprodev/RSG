@@ -2649,6 +2649,8 @@ footer {
         color: #000; }
         .text-default .download-block .text-form p a {
           color: #000; }
+          .text-default .download-block .text-form p a:hover {
+            opacity: 0.7; }
     .text-default .download-block .bg {
       left: -97px;
       right: -97px;
@@ -2842,6 +2844,8 @@ footer {
       height: 121px; }
   .contact-banner .text-form p, .contact-banner .text-form p a {
     color: #000; }
+    .contact-banner .text-form p:hover, .contact-banner .text-form p a:hover {
+      opacity: 0.7; }
 
 /*--------------------END-CONTACT-BANNER-------------------------*/
 /*--------------------CONTACT-MAP-------------------------*/
@@ -2877,6 +2881,9 @@ div#map a,
 div#map button,
 div.gm-bundled-control div.gmnoprint {
   display: none !important; }
+
+div#map {
+  text-align: center; }
 
 /*-------------------END-CONTACT-MAP-------------------------*/
 /*-------------------VACANCIES-BANNER------------------------*/
@@ -3232,5 +3239,4 @@ div.gm-bundled-control div.gmnoprint {
 
 .wrap-hidden {
   overflow: hidden; }
-
 /*# sourceMappingURL=styles.css.map */
