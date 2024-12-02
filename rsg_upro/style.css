@@ -1,0 +1,34 @@
+/*   
+Theme Name: RSG
+*/
+.wpcf7 form .wpcf7-response-output{
+  position: absolute;
+  top: calc(100% - 1px);
+  left: 0;
+  right: 0;
+	margin: 0;
+	
+}
+
+.wpcf7 form{
+  position: relative;
+}
+
+
+.wpcf7 .default-form .wpcf7-response-output{
+	top: 101%;
+}
+
+.wpcf7-not-valid-tip{
+	font-size: 12px;
+}
+
+.form-filter .input-wrap input:checked + label {
+    background: #ff6b35;
+    color: #fff;
+}
+
+@media (max-width:575px){
+	.wpcf7 form .wpcf7-response-output{
+		top: calc(100% + 5px);}
+}
