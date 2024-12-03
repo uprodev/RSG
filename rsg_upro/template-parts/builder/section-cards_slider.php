@@ -58,6 +58,7 @@ if($args['row']):
                       foreach ($array as $item_2) {
                         $params[$item_2] = $item[$item_2];
                       }
+                      $params['is_custom'] = true;
                       get_template_part('parts/content', $post_type, $params); 
                       ?>
 

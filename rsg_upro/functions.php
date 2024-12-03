@@ -19,6 +19,7 @@ function load_style_script(){
 	wp_enqueue_style('my-style-main', get_stylesheet_directory_uri() . '/style.css');
 
 	wp_enqueue_script('jquery');
+    wp_enqueue_script('my-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDiyT05YehIdz2LrV-QOeRa5M18WfKtlnY&libraries=places&v=3.exp&callback=initMap', array(), false, ['in_footer' => true, 'strategy'  => 'defer']);
 	wp_enqueue_script('my-bootstrap', get_stylesheet_directory_uri() . '/js/bootstrap.bundle.min.js', array(), false, true);
     wp_enqueue_script('my-sticky', get_stylesheet_directory_uri() . '/js/jquery.sticky.js', array(), false, true);
     wp_enqueue_script('my-swiper', get_stylesheet_directory_uri() . '/js/swiper.js', array(), false, true);
@@ -55,6 +56,12 @@ if(function_exists('acf_add_options_page')) {
 add_filter('wpcf7_autop_or_not', '__return_false');
 
 
+function my_acf_init() {
+    acf_update_setting('google_api_key', 'AIzaSyDiyT05YehIdz2LrV-QOeRa5M18WfKtlnY');
+}
+add_action('acf/init', 'my_acf_init');
+
+
 add_filter('tiny_mce_before_init', 'override_mce_options');
 function override_mce_options($initArray) {
 	$opts = '*[*]';
@@ -64,7 +71,7 @@ function override_mce_options($initArray) {
 }
 
 
-function add_class_content($string, $p_class='', $h_class='') {
+function add_class_content($string, $p_class='', $h_class='', $ul_class='') {
 
     if (str_contains($string, '<h') && $h_class) {
         foreach (range(1,6) as $i) {
@@ -75,6 +82,10 @@ function add_class_content($string, $p_class='', $h_class='') {
     if (str_contains($string, '<p') && $p_class){
         $from[] = "<p";
         $to[] = '<p class="'. $p_class . '"';
+    }
+    if (str_contains($string, '<ul') && $ul_class){
+        $from[] = "<ul";
+        $to[] = '<ul class="'. $ul_class . '"';
     }
 
     return str_replace ($from, $to, $string);

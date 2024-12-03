@@ -8,7 +8,7 @@ $title = isset($args['title']) ? $args['title'] : get_the_title();
 $text = isset($args['text']) ? $args['text'] : apply_filters('the_content', get_the_content());
 $hours = isset($args['hours']) ? $args['hours'] : get_field('hours');
 $location = isset($args['location']) ? $args['location'] : get_field('location');
-$link_url = isset($args['link']) ? ($args['link'] ? $args['link']['url'] : '') : get_the_permalink();
+$link_url = isset($args['is_custom']) && $args['is_custom'] ? ($args['link'] ? $args['link']['url'] : '') : get_the_permalink();
 $link_target = isset($args['link']) && $args['link'] && $args['link']['target'] ? ' target="_blank"' : '';
 ?>
 

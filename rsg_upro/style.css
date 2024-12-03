@@ -1,6 +1,46 @@
 /*   
 Theme Name: RSG
 */
+.text-default .content .form-wrap h2{
+	color: #fff;
+}
+
+.knowledge-3x .item ul{
+	    margin-top: 10px;
+}
+
+.knowledge-3x .item .text .vacancies-label {
+    color: #ff6b35;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.knowledge-3x .item ul li{
+	margin-bottom: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.knowledge-3x .item ul li i{
+	    margin-right: 10px;
+    font-size: 16px;
+    color: #ff6b35;
+}
+.search h1{
+	    color: #002846;
+}
+
+.search .knowledge{
+	padding-top: 150px;
+}
 .wpcf7 form .wpcf7-response-output{
   position: absolute;
   top: calc(100% - 1px);
@@ -8,6 +48,16 @@ Theme Name: RSG
   right: 0;
 	margin: 0;
 	
+}
+
+h4{
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.56;
+  letter-spacing: normal;
+  margin: 0 0 15px;
 }
 
 .wpcf7 form{

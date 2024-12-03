@@ -107,6 +107,7 @@ if($args['row']):
               <form role="search" method="get" action="<?php echo home_url( '/' ) ?>" class="d-flex flex-wrap form-search justify-content-between align-items-center">
                 <label for="search"></label>
                 <input type="search" name="s" id="s" placeholder="<?= $search_placeholder ?>">
+                <input type="hidden" name="post_type" value="nieuws,case" />
                 <button type="submit" class="btn-default btn-big"><?= $search_button_text ?><i class="fa-regular fa-magnifying-glass"></i></button>
               </form>
             </div>

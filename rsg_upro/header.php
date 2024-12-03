@@ -11,7 +11,7 @@
 
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
-  <header<?php if(is_404() || is_singular(['nieuws', 'vacature'])) echo ' class="header-blue"' ?>>
+  <header<?php if(is_404() || is_search() || is_singular(['nieuws', 'vacature'])) echo ' class="header-blue"' ?>>
     <div class="top-line">
       <div class="container">
         <div class="row justify-content-between">

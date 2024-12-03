@@ -1,21 +1,25 @@
 <?php get_header(); ?>
 
-<section class="help">
+<section class="knowledge">
 	<div class="container">
-		<div class="help__content">
-			<div class="help__title title show">
-				<h2>Search results: <?= get_search_query() ?></h2>
-			</div>
-			<div class="help__items">
+		<div class="row">
+			<div class="wrap d-flex flex-wrap">
 
-				<?php while ($wp_query->have_posts()): $wp_query->the_post(); ?>
-
-					<a href="<?php the_permalink() ?>" class="help__item">
-						<?php the_post_thumbnail('full') ?>
-						<h4><?php the_title() ?></h4>
-					</a>
-
-				<?php endwhile; ?>
+				<?php 
+				if ($wp_query->have_posts()) {
+					?>
+					<h1><?php _e('Zoekresultaten', 'RSG') ?>: <?= get_search_query() ?></h1>
+					<?php 
+					while ($wp_query->have_posts()): $wp_query->the_post();
+						get_template_part('parts/content', 'nieuws');
+					endwhile; 
+				}
+				else { 
+					?>
+					<h1><?php _e('Geen berichten gevonden', 'RSG') ?></h1>
+					<?php 
+				}
+				?>
 
 			</div>
 		</div>

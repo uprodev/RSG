@@ -10,7 +10,7 @@ if($args['row']):
     $post_type = ['nieuws', 'case'];
     $args = array(
       'post_type' => $post_type, 
-      'posts_per_page' => 3, 
+      'posts_per_page' => 12, 
     );
 
     if($default_custom == 'Custom'){

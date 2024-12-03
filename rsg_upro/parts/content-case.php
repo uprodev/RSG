@@ -2,7 +2,7 @@
 $image_html = isset($args['image']) ? wp_get_attachment_image($args['image']['ID'], 'full') : get_the_post_thumbnail(null, 'full');
 $subtitle = isset($args['subtitle']) ? $args['subtitle'] : get_field('subtitle');
 $text = isset($args['text']) ? $args['text'] : apply_filters('the_content', get_the_content());
-$link_url = isset($args['link']) ? ($args['link'] ? $args['link']['url'] : '') : get_the_permalink();
+$link_url = isset($args['is_custom']) && $args['is_custom'] ? ($args['link'] ? $args['link']['url'] : '') : get_the_permalink();
 $link_title = isset($args['link']) && $args['link'] ? $args['link']['title'] : __('Ontdek de case', 'RSG');
 $link_target = isset($args['link']) && $args['link'] && $args['link']['target'] ? ' target="_blank"' : '';
 ?>

@@ -35,7 +35,7 @@ function filter_kennisbank(){
 	if($_GET['post_type']) $post_type = $_GET['post_type'];
 	$args = array(
 		'post_type' => $post_type,
-		'posts_per_page' => 3,
+		'posts_per_page' => 12,
 		'post_status' => 'publish',
 	);
 
