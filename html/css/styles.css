@@ -2719,7 +2719,7 @@ footer .bottom-right ul li:last-child a {
     font-stretch: normal;
     font-style: normal;
     line-height: 1.44;
-    color: #ff0007; }
+    color: #ff6b35; }
     .bottom-link .link-wrap a i {
       margin-right: 10px;
       position: relative;
@@ -3307,5 +3307,4 @@ div#map {
 
 .text-default-aside .aside .img-wrap figure img {
   border-radius: 0 70% 0 0; }
-
 /*# sourceMappingURL=styles.css.map */
