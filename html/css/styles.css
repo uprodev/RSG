@@ -1909,65 +1909,48 @@ footer .bottom-right ul li:last-child a {
     display: inline-block;
     position: relative; }
     .link-down a img {
-      -webkit-filter: brightness(0) saturate(100%) invert(14%) sepia(29%) saturate(3024%) hue-rotate(177deg) brightness(91%) contrast(104%);
-              filter: brightness(0) saturate(100%) invert(14%) sepia(29%) saturate(3024%) hue-rotate(177deg) brightness(91%) contrast(104%); }
+      width: 35px; }
     .link-down a span {
       display: block;
       text-align: center;
       -webkit-transform-origin: center;
               transform-origin: center;
-      -webkit-animation: drop 2s infinite linear;
-              animation: drop 2s infinite linear;
+      -webkit-animation: drop 1s infinite linear;
+              animation: drop 1s infinite linear;
       -webkit-transition: all 0.4s ease;
       transition: all 0.4s ease;
       position: absolute;
-      left: 4px; }
+      left: 16px;
+      -webkit-animation-play-state: paused;
+              animation-play-state: paused; }
       .link-down a span img {
-        opacity: 0;
+        opacity: 1;
         -webkit-transition: all 0.4s ease;
         transition: all 0.4s ease;
-        -webkit-filter: brightness(0) saturate(100%) invert(14%) sepia(29%) saturate(3024%) hue-rotate(177deg) brightness(91%) contrast(104%);
-                filter: brightness(0) saturate(100%) invert(14%) sepia(29%) saturate(3024%) hue-rotate(177deg) brightness(91%) contrast(104%); }
+        width: 2px; }
     .link-down a span + span {
       margin-top: -15px;
       -webkit-animation-delay: 1s;
               animation-delay: 1s; }
-    .link-down a:hover span img {
-      opacity: 1; }
+    .link-down a:hover span {
+      -webkit-animation-play-state: running;
+              animation-play-state: running; }
 
 @-webkit-keyframes drop {
   0% {
-    bottom: -15px;
-    opacity: 0;
-    -webkit-transform: scale(1);
-            transform: scale(1); }
-  30% {
-    bottom: -30px;
-    opacity: 1;
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8); }
+    top: 0;
+    opacity: 1; }
   100% {
-    bottom: -45px;
-    opacity: 0;
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6); } }
+    top: 10px;
+    opacity: 1; } }
 
 @keyframes drop {
   0% {
-    bottom: -15px;
-    opacity: 0;
-    -webkit-transform: scale(1);
-            transform: scale(1); }
-  30% {
-    bottom: -30px;
-    opacity: 1;
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8); }
+    top: 0;
+    opacity: 1; }
   100% {
-    bottom: -45px;
-    opacity: 0;
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6); } }
+    top: 10px;
+    opacity: 1; } }
 /*-------------------END-SERVICES-BANNER-----------------------------*/
 /*-------------------SMALL-CONTACT-BLOCK-----------------------------*/
 .small-contact-block {
@@ -3307,4 +3290,5 @@ div#map {
 
 .text-default-aside .aside .img-wrap figure img {
   border-radius: 0 70% 0 0; }
+
 /*# sourceMappingURL=styles.css.map */

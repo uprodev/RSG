@@ -2125,20 +2125,21 @@ footer .bottom-right ul li:last-child{
     display: inline-block;
     position: relative;
     img{
-      filter: brightness(0) saturate(100%) invert(14%) sepia(29%) saturate(3024%) hue-rotate(177deg) brightness(91%) contrast(104%);
+      width: 35px;
     }
     span{
       display: block;
       text-align: center;
       transform-origin: center;
-      animation: drop 2s infinite linear;
+      animation: drop 1s infinite linear;
       transition: all 0.4s ease;
       position: absolute;
-      left: 4px;
+      left: 16px;
+      animation-play-state: paused;
       img{
-        opacity: 0;
+        opacity: 1;
         transition: all 0.4s ease;
-        filter: brightness(0) saturate(100%) invert(14%) sepia(29%) saturate(3024%) hue-rotate(177deg) brightness(91%) contrast(104%);
+        width: 2px;
       }
     }
     span + span{
@@ -2147,9 +2148,7 @@ footer .bottom-right ul li:last-child{
     }
     &:hover{
       span{
-        img{
-          opacity: 1;
-        }
+        animation-play-state: running;
       }
     }
   }
@@ -2157,19 +2156,12 @@ footer .bottom-right ul li:last-child{
 
 @keyframes drop {
   0%{
-    bottom: -15px;
-    opacity: 0;
-    transform: scale(1);
-  }
-  30%{
-    bottom: -30px;
+    top: 0;
     opacity: 1;
-    transform: scale(0.8);
   }
   100%{
-    bottom: -45px;
-    opacity: 0;
-    transform: scale(0.6);
+    top: 10px;
+    opacity: 1;
   }
 }
 
