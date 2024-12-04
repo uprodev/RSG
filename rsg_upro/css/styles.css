@@ -501,7 +501,7 @@ header {
       margin: 0; }
     .home-banner .item ul {
       width: 185px;
-      padding: 13px 0 0 20px;
+      padding: 13px 0 0 17px;
       position: relative; }
       .home-banner .item ul:before {
         position: absolute;
@@ -835,6 +835,9 @@ input[type=number] {
 .text-img figure .img img {
   width: 370px; }
 
+.text-img .check-list li:before {
+  font-weight: 700; }
+
 /*---------------------------END-TEXT-IMG------------------------------*/
 /*---------------------------CARDS-SLIDER-BLOCK------------------------------*/
 .cards-slider-block {
@@ -925,6 +928,19 @@ input[type=number] {
           margin-bottom: 0; }
     .cards-slider .swiper-slide .link {
       margin-top: 5px; }
+
+.cards-slider .swiper-slide a:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  display: block; }
+
+.cards-slider .swiper-slide figure {
+  position: relative;
+  z-index: 10; }
 
 .nav-wrap {
   border-radius: 32px;
@@ -1637,6 +1653,9 @@ footer {
   footer .bottom {
     max-width: calc(100% - 24px); }
 
+footer .bottom-right ul li:last-child a {
+  text-decoration: underline; }
+
 .soc-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1864,6 +1883,9 @@ footer {
       text-align: left;
       text-transform: uppercase; }
 
+.client-banner h1 {
+  font-size: 50px; }
+
 .services-banner.figure-bg figure:after {
   background: #C7CBB4; }
 
@@ -1887,65 +1909,48 @@ footer {
     display: inline-block;
     position: relative; }
     .link-down a img {
-      -webkit-filter: brightness(0) saturate(100%) invert(14%) sepia(29%) saturate(3024%) hue-rotate(177deg) brightness(91%) contrast(104%);
-              filter: brightness(0) saturate(100%) invert(14%) sepia(29%) saturate(3024%) hue-rotate(177deg) brightness(91%) contrast(104%); }
+      width: 35px; }
     .link-down a span {
       display: block;
       text-align: center;
       -webkit-transform-origin: center;
               transform-origin: center;
-      -webkit-animation: drop 2s infinite linear;
-              animation: drop 2s infinite linear;
+      -webkit-animation: drop 1s infinite linear;
+              animation: drop 1s infinite linear;
       -webkit-transition: all 0.4s ease;
       transition: all 0.4s ease;
       position: absolute;
-      left: 4px; }
+      left: 16px;
+      -webkit-animation-play-state: paused;
+              animation-play-state: paused; }
       .link-down a span img {
-        opacity: 0;
+        opacity: 1;
         -webkit-transition: all 0.4s ease;
         transition: all 0.4s ease;
-        -webkit-filter: brightness(0) saturate(100%) invert(14%) sepia(29%) saturate(3024%) hue-rotate(177deg) brightness(91%) contrast(104%);
-                filter: brightness(0) saturate(100%) invert(14%) sepia(29%) saturate(3024%) hue-rotate(177deg) brightness(91%) contrast(104%); }
+        width: 2px; }
     .link-down a span + span {
       margin-top: -15px;
       -webkit-animation-delay: 1s;
               animation-delay: 1s; }
-    .link-down a:hover span img {
-      opacity: 1; }
+    .link-down a:hover span {
+      -webkit-animation-play-state: running;
+              animation-play-state: running; }
 
 @-webkit-keyframes drop {
   0% {
-    bottom: -15px;
-    opacity: 0;
-    -webkit-transform: scale(1);
-            transform: scale(1); }
-  30% {
-    bottom: -30px;
-    opacity: 1;
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8); }
+    top: 0;
+    opacity: 1; }
   100% {
-    bottom: -45px;
-    opacity: 0;
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6); } }
+    top: 10px;
+    opacity: 1; } }
 
 @keyframes drop {
   0% {
-    bottom: -15px;
-    opacity: 0;
-    -webkit-transform: scale(1);
-            transform: scale(1); }
-  30% {
-    bottom: -30px;
-    opacity: 1;
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8); }
+    top: 0;
+    opacity: 1; }
   100% {
-    bottom: -45px;
-    opacity: 0;
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6); } }
+    top: 10px;
+    opacity: 1; } }
 /*-------------------END-SERVICES-BANNER-----------------------------*/
 /*-------------------SMALL-CONTACT-BLOCK-----------------------------*/
 .small-contact-block {
@@ -2082,6 +2087,9 @@ footer {
 
 .faq .text {
   padding-right: 0; }
+.faq h2 {
+  line-height: 1;
+  margin-bottom: 10px; }
 
 /*----------------------END-FAQ-----------------------------*/
 /*-------------------------SEO-BLOCK-----------------------------*/
@@ -2167,6 +2175,15 @@ footer {
     background-color: #fff;
     position: relative;
     padding: 55px 20px 30px; }
+    .card-icon-block .item h6 {
+      font-size: 22px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.27;
+      letter-spacing: normal;
+      text-align: center;
+      color: #002846; }
     .card-icon-block .item .icon-wrap {
       position: absolute;
       top: -38px;
@@ -2201,15 +2218,6 @@ footer {
       color: #002846; }
   .card-icon-block .content {
     grid-gap: 16px; }
-  .card-icon-block h6 {
-    font-size: 22px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.27;
-    letter-spacing: normal;
-    text-align: center;
-    color: #002846; }
   .card-icon-block .btn-wrap {
     margin-top: 40px; }
 
@@ -2364,6 +2372,9 @@ footer {
       color: #ff6b35;
       padding: 0 12px; }
     .form-filter .input-wrap input:hover + label {
+      background: #ff6b35;
+      color: #fff; }
+    .form-filter .input-wrap input:checked + label {
       background: #ff6b35;
       color: #fff; }
 
@@ -2670,9 +2681,13 @@ footer {
         height: auto;
         -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.14);
                 box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.14); }
-    .text-default .download-block .form-wrap {
+    .text-default .download-block .form-wrap-1 {
       width: calc(100% - 315px);
       padding-top: 10px; }
+      .text-default .download-block .form-wrap-1 p {
+        color: #000 !important; }
+        .text-default .download-block .form-wrap-1 p a {
+          color: #000 !important; }
   .text-default p + p {
     margin-top: -15px; }
 
@@ -2687,7 +2702,7 @@ footer {
     font-stretch: normal;
     font-style: normal;
     line-height: 1.44;
-    color: #ff0007; }
+    color: #ff6b35; }
     .bottom-link .link-wrap a i {
       margin-right: 10px;
       position: relative;
@@ -2844,8 +2859,8 @@ footer {
       height: 121px; }
   .contact-banner .text-form p, .contact-banner .text-form p a {
     color: #000; }
-    .contact-banner .text-form p:hover, .contact-banner .text-form p a:hover {
-      opacity: 0.7; }
+  .contact-banner .text-form p a:hover {
+    opacity: 0.7; }
 
 /*--------------------END-CONTACT-BANNER-------------------------*/
 /*--------------------CONTACT-MAP-------------------------*/
@@ -2952,10 +2967,12 @@ div#map {
       justify-content: center;
       -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center; }
-      .vacancies .item .icon-wrap a:hover i {
-        -webkit-transform: rotate(-45deg);
-                transform: rotate(-45deg); }
+      align-items: center;
+      /* &:hover{
+         i{
+           transform: rotate(-45deg);
+         }
+       }*/ }
   .vacancies .item:hover .icon-wrap {
     opacity: 1; }
 .vacancies .item .text h6 {
@@ -3239,4 +3256,39 @@ div#map {
 
 .wrap-hidden {
   overflow: hidden; }
+
+.cta-block .img-wrap figure:after, .text-default-aside .aside .img-wrap figure:after {
+  position: absolute;
+  bottom: -20%;
+  left: 0;
+  width: 90%;
+  height: 100%;
+  content: '';
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(black));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), black);
+  border-radius: 0 80% 0 0;
+  -webkit-filter: blur(20px);
+          filter: blur(20px); }
+
+.small-contact-block p b {
+  font-weight: 700; }
+
+.knowledge .item .text {
+  padding-top: 45px !important; }
+
+.knowledge .item .text h6 a:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  display: block; }
+
+.knowledge .item .text h6 a:hover {
+  color: #000f2b; }
+
+.text-default-aside .aside .img-wrap figure img {
+  border-radius: 0 70% 0 0; }
+
 /*# sourceMappingURL=styles.css.map */

@@ -1,13 +1,18 @@
 </main>
 
-<?php $is_on_cta = get_field('on_cta') ?>
+<?php 
+$queried_object_id = get_queried_object_id();
+$field_id = $queried_object_id;
+if(is_tax('vacature_cat')) $field_id = 'term_' . $queried_object_id;
+$is_on_cta = get_field('on_cta', $field_id);
+?>
 
 <footer<?php if($is_on_cta) echo ' class="footer-cta"' ?>>
 
   <?php if ($is_on_cta): ?>
 
     <?php 
-    $is_default = get_field('default_custom_cta') == 'Default';
+    $is_default = get_field('default_custom_cta', $field_id) == 'Default';
 
     $is_default_select = $is_default && get_field('select_or_custom_fc', 'option') == 'Select';
     $is_default_custom = $is_default && get_field('select_or_custom_fc', 'option') == 'Custom';
@@ -15,11 +20,11 @@
     $is_custom_custom = !$is_default && get_field('select_or_custom_contactperson_cta') == 'Custom';
 
     $option_select = get_field('select_fc', 'option');
-    $post_select = get_field('select_cta');
+    $post_select = get_field('select_cta', $field_id);
 
     $fields = ['title', 'text', 'form'];
     foreach ($fields as $field) {
-      $$field = $is_default ? get_field($field . '_fc', 'option') : get_field($field . '_cta');
+      $$field = $is_default ? get_field($field . '_fc', 'option') : get_field($field . '_cta', $field_id);
     }
 
     if ($is_default_select || $is_custom_select) {
@@ -30,7 +35,7 @@
     if ($is_default_custom || $is_custom_custom) {
       $fields = ['image', 'name', 'function'];
       foreach ($fields as $field) {
-        $$field = $is_default_custom ? get_field($field . '_fc', 'option') : get_field($field . '_cta');
+        $$field = $is_default_custom ? get_field($field . '_fc', 'option') : get_field($field . '_cta', $field_id);
       }
       $image_html = wp_get_attachment_image($image['ID'], 'full');
     }

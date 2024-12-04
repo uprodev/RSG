@@ -6,7 +6,22 @@ if($args['row']):
     <div class="wrap-hidden">
     <?php endif ?>
 
-    <section class="services-banner<?php if($image_type == 'Transparent background image') echo ' figure-bg' ?>"<?php if($id) echo ' id="' . $id . '"' ?>>
+    <?php 
+    switch ($image_size) {
+      case 'Large':
+      $image_size_class = ' img-w-550';
+      break;
+      case 'Full':
+      $image_size_class = ' full-img';
+      break;
+      
+      default:
+      $image_size_class = '';
+      break;
+    }
+    ?>
+
+    <section class="services-banner<?php if($image_type == 'Transparent background image') echo ' figure-bg'; if($image_background == 'Lightblue') echo ' figure-bg-blue'; if($is_clients_banner) echo ' client-banner'; echo $image_size_class ?>"<?php if($id) echo ' id="' . $id . '"' ?>>
       <div class="bg"></div>
       <div class="container">
         <div class="row justify-content-between align-items-center">
@@ -26,7 +41,14 @@ if($args['row']):
               <div class="btn-wrap d-flex align-items-center">
 
                 <?php if ($button): ?>
-                  <a href="<?= $button['url'] ?>" class="btn-default btn-big"<?php if($button['target']) echo ' target="_blank"' ?>><?= html_entity_decode($button['title']) ?></a>
+                  <a href="<?= $button['url'] ?>" class="btn-default btn-big"<?php if($button['target']) echo ' target="_blank"' ?>>
+                    <?= html_entity_decode($button['title']) ?>
+
+                    <?php if ($button_icon): ?>
+                      <i class="<?= $button_icon ?>"></i>
+                    <?php endif ?>
+                    
+                  </a>
                 <?php endif ?>
 
                 <?php if ($secondary_link): ?>
@@ -78,16 +100,11 @@ if($args['row']):
       </div>
     </div>
 
-    <?php if ($is_scroll_link && $scroll_link): ?>
+    <?php if ($anchor_link): ?>
       <div class="btn-scroll link-down">
-        <a href="<?= $scroll_link['url'] ?>" class="scroll"<?php if($scroll_link['target']) echo ' target="_blank"' ?>>
-
-          <?php if ($icon_scroll_link): ?>
-            <?= wp_get_attachment_image($icon_scroll_link['ID'], 'full') ?>
-            <span><img src="<?= get_stylesheet_directory_uri() ?>/img/icon-1-2.svg" alt=""></span>
-            <span><img src="<?= get_stylesheet_directory_uri() ?>/img/icon-1-2.svg" alt=""></span>
-          <?php endif ?>
-          
+        <a href="<?= $anchor_link['url'] ?>" class="scroll"<?php if($anchor_link['target']) echo ' target="_blank"' ?>>
+          <img src="<?= get_stylesheet_directory_uri() ?>/img/icon-m-1.svg" alt="">
+          <span><img src="<?= get_stylesheet_directory_uri() ?>/img/icon-m-2.svg" alt=""></span>
         </a>
       </div>
     <?php endif ?>

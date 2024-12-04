@@ -5,12 +5,16 @@ Theme Name: RSG
 	color: #fff;
 }
 
+.knowledge .item{
+	position: relative;
+}
+
 .knowledge-3x .item ul{
 	    margin-top: 10px;
 }
 
-.knowledge-3x .item .text .vacancies-label {
-    color: #ff6b35;
+.knowledge-3x .item .text .vacancies-label, .knowledge .item .text .vacancies-label{
+	color: #ff6b35;
     margin-bottom: 10px;
     font-size: 16px;
     font-weight: 500;

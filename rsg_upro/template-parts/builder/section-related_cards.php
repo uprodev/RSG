@@ -16,7 +16,7 @@ if($args['row']):
       <div class="wrap-hidden">
       <?php endif ?>
 
-      <section class="knowledge knowledge-3x"<?php if($id) echo ' id="' . $id . '"' ?>>
+      <section class="knowledge knowledge-3x vacancies"<?php if($id) echo ' id="' . $id . '"' ?>>
         <div class="bg"><img src="<?= get_stylesheet_directory_uri() ?>/img/after-3.png" alt=""></div>
         <div class="container">
           <div class="row">
