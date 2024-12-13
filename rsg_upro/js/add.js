@@ -1,5 +1,7 @@
 jQuery(document).ready(function($) { 
 
+	$('.top-menu li:has(.sub-menu) > a').append('<i class="fa-solid fa-chevron-down"></i>');
+
 	$(document).on('click', '.load_kennisbank', function(e){
 		e.preventDefault();
 		let _this = $(this);

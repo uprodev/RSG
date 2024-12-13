@@ -45,7 +45,7 @@ if($args['row']):
             <?php endif ?>
 
             <div class="slider-wrap">
-              <div class="swiper cards-slider cards-slider-1">
+              <div class="swiper cards-slider vacancies-slider">
                 <div class="swiper-wrapper">
 
                   <?php if ($is_custom): ?>
@@ -97,10 +97,10 @@ if($args['row']):
             </div>
             <div class="btn-wrap d-flex justify-content-between flex-wrap align-items-center">
               <div class="nav-wrap d-flex align-items-center">
-                <div class="swiper-button-prev cards-prev cards-prev-1 swiper-btn"><i class="fa-regular fa-arrow-left"></i></div>
-                <div class="swiper-pagination cards-pagination cards-pagination-1"></div>
-                <div class="swiper-button-next cards-next cards-next-1 swiper-btn"><i class="fa-regular fa-arrow-right"></i></div>
-              </div>
+              <div class="swiper-button-prev vacancies-prev swiper-btn"><i class="fa-regular fa-arrow-left"></i></div>
+              <div class="swiper-pagination vacancies-pagination"></div>
+              <div class="swiper-button-next vacancies-next swiper-btn"><i class="fa-regular fa-arrow-right"></i></div>
+            </div>
 
               <?php if ($button): ?>
                 <a href="<?= $button['url'] ?>" class="btn-default btn-border btn-big"<?php if($button['target']) echo ' target="_blank"' ?>><?= html_entity_decode($button['title']) ?></a>

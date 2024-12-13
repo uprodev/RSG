@@ -4,7 +4,17 @@ Theme Name: RSG
 .text-default .content .form-wrap h2{
 	color: #fff;
 }
-
+.cases p{
+	 font-size: 26px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.62;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000f2b;
+    margin: 0 0 20px;
+}
 .knowledge .item{
 	position: relative;
 }
@@ -47,7 +57,7 @@ Theme Name: RSG
 }
 .wpcf7 form .wpcf7-response-output{
   position: absolute;
-  top: calc(100% - 1px);
+  top: calc(100% + 15px);
   left: 0;
   right: 0;
 	margin: 0;
@@ -82,7 +92,69 @@ h4{
     color: #fff;
 }
 
+.form-cta .input-wrap input + .wpcf7-not-valid-tip{
+	position: absolute;
+	top: calc(100% + 17px);
+	left: 0;
+}
+
+.knowledge-slider .swiper-slide, .vacancies-slider .swiper-slide{
+	position: relative;
+}
+
+.knowledge-slider .swiper-slide .icon-wrap, .vacancies-slider .swiper-slide .icon-wrap{
+      position: absolute;
+    z-index: 10;
+    top: 172px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    opacity: 0; }
+.knowledge-slider .swiper-slide:hover .icon-wrap, .vacancies-slider .swiper-slide:hover .icon-wrap{
+	opacity: 1;
+}
+.knowledge-slider .swiper-slide .icon-wrap i, .vacancies-slider .swiper-slide .icon-wrap i {
+        font-size: 35px;
+      line-height: 1;
+      color: #fff;
+      -webkit-transition: all .4s ease;
+      transition: all .4s ease;
+}
+.knowledge-slider .swiper-slide .icon-wrap a, .vacancies-slider .swiper-slide .icon-wrap a{
+	  border: solid 5px #fff;
+      background-color: #ff6b35;
+      width: 76px;
+      height: 76px;
+      border-radius: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+}
+.vacancies-slider .swiper-slide .text{
+	padding-top: 50px!important;
+}
+@media (max-width:1199px){
+	.cases p{
+		font-size: 20px;
+		line-height: 1.5;
+	}
+}
 @media (max-width:575px){
 	.wpcf7 form .wpcf7-response-output{
 		top: calc(100% + 5px);}
+	.form-cta .input-wrap input + .wpcf7-not-valid-tip{
+		position: relative;
+		top: 0;
+	}
+	.knowledge-slider .swiper-slide .text{
+		padding-top: 50px!important;
+	}
 }

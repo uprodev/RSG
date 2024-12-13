@@ -832,7 +832,7 @@ input[type=number] {
       padding: 0;
       cursor: pointer; }
 
-.text-img figure .img img {
+.text-img figure .img img, .text-img figure picture img {
   width: 370px; }
 
 .text-img .check-list li:before {

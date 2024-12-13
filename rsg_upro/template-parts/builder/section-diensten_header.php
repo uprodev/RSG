@@ -21,7 +21,7 @@ if($args['row']):
     }
     ?>
 
-    <section class="services-banner<?php if($image_type == 'Transparent background image') echo ' figure-bg'; if($image_background == 'Lightblue') echo ' figure-bg-blue'; if($is_clients_banner) echo ' client-banner'; echo $image_size_class ?>"<?php if($id) echo ' id="' . $id . '"' ?>>
+    <section class="services-banner<?php if($image_type == 'Transparent background image') echo ' figure-bg'; if($image_background == 'Lightblue') echo ' figure-bg-blue'; if($is_clients_banner) echo ' client-banner'; if($background_color == 'Lightblue') echo ' bg-lightblue' ; echo $image_size_class ?>"<?php if($id) echo ' id="' . $id . '"' ?>>
       <div class="bg"></div>
       <div class="container">
         <div class="row justify-content-between align-items-center">
@@ -36,6 +36,26 @@ if($args['row']):
             <?php endif ?>
 
             <?= $text ?>
+
+            <?php if ($hours || $location): ?>
+              <ul class="list-icon">
+
+                <?php if ($hours): ?>
+                  <li>
+                    <i class="fa-regular fa-clock"></i>
+                    <?= $hours ?>
+                  </li>
+                <?php endif ?>
+                
+                <?php if ($location): ?>
+                  <li>
+                    <i class="fa-regular fa-location-dot"></i>
+                    <?= $location ?>
+                  </li>
+                <?php endif ?>
+                
+              </ul>
+            <?php endif ?>
 
             <?php if ($button || $secondary_link): ?>
               <div class="btn-wrap d-flex align-items-center">

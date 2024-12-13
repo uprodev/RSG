@@ -566,7 +566,7 @@
   .text-img figure {
     padding: 0 12px;
     margin-top: 30px; }
-    .text-img figure .img img {
+    .text-img figure .img img, .text-img figure picture img {
       max-width: calc(100% - 75px); }
 
   .text-img figure .after {
