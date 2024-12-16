@@ -1,5 +1,7 @@
 jQuery(document).ready(function($) { 
 
+	$('.top-menu li:has(.sub-menu) > a').append('<i class="fa-solid fa-chevron-down"></i>');
+
 	$(document).on('click', '.load_kennisbank', function(e){
 		e.preventDefault();
 		let _this = $(this);
@@ -50,6 +52,35 @@ jQuery(document).ready(function($) {
 	$('#filter_kennisbank input').change(function(e){
 		e.preventDefault();
 		filter_kennisbank();
+	});
+	
+
+	$(document).on('click', '.load_vacatures', function(e){
+		e.preventDefault();
+		let _this = $(this);
+
+		let data = {
+			'action': 'load_vacatures',
+			'query': _this.attr('data-param-posts'),
+			'page': this_page,
+		}
+
+		$.ajax({
+			url: '/wp-admin/admin-ajax.php',
+			data: data,
+			type: 'POST',
+			success:function(data){
+				if (data) {
+					$('#response_vacatures').append(data); 
+					this_page++;                      
+					if (this_page == _this.attr('data-max-pages')) {
+						_this.remove();               
+					}
+				} else {                              
+					_this.remove();                   
+				}
+			}
+		});
 	});
 
 });

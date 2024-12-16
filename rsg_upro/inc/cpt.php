@@ -28,7 +28,7 @@ function create_taxonomy(){
 					],
 					'description'           => '', 
 					'public'                => true,
-					'publicly_queryable'  => $post_type_key == 'faq' || $post_type_key == 'contact' ? false : true,
+					'publicly_queryable'  => $post_type_key == 'vacature' && $taxonomy_key == 'cat' ? true : false,
 		// 'show_in_nav_menus'     => true, 
 		// 'show_ui'               => true, 
 		// 'show_in_menu'          => true, 

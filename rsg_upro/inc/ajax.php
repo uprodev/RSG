@@ -3,6 +3,7 @@
 $actions = [
 	'load_kennisbank',
 	'filter_kennisbank',
+	'load_vacatures',
 
 ];
 foreach ($actions as $action) {
@@ -75,5 +76,23 @@ function filter_kennisbank(){
 		<?php wp_reset_postdata();
 	endif;
 
+	die();
+}
+
+
+function load_vacatures () {
+	$args = unserialize( stripslashes( $_POST['query'] ) );
+	$args['paged'] = $_POST['page'] + 1;
+
+	$query = new WP_Query( $args );
+	if ( $query->have_posts() ) {
+		while ( $query->have_posts() ) { 
+			$query->the_post(); ?>
+
+			<?php get_template_part('parts/content', 'vacature') ?>
+
+		<?php }
+	}
+	wp_reset_query(); 
 	die();
 }

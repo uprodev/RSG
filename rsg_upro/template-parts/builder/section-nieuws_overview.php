@@ -22,7 +22,7 @@ if($args['row']):
     if($wp_query->have_posts()):
       ?>
 
-      <section class="knowledge"<?php if($id) echo ' id="' . $id . '"' ?>>
+      <section class="knowledge vacancies"<?php if($id) echo ' id="' . $id . '"' ?>>
         <div class="container">
           <div class="row" id="get_kennisbank">
             <div class="wrap d-flex flex-wrap" id="response_kennisbank">

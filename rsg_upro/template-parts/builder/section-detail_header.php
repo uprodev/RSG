@@ -64,9 +64,8 @@ if($args['row']):
       <?php if ($anchor_link): ?>
         <div class="btn-scroll link-down">
           <a href="<?= $anchor_link['url'] ?>" class="scroll"<?php if($anchor_link['target']) echo ' target="_blank"' ?>>
-            <img src="<?= get_stylesheet_directory_uri() ?>/img/icon-1-1.svg" alt="">
-            <span><img src="<?= get_stylesheet_directory_uri() ?>/img/icon-1-2.svg" alt=""></span>
-            <span><img src="<?= get_stylesheet_directory_uri() ?>/img/icon-1-2.svg" alt=""></span>
+            <img src="<?= get_stylesheet_directory_uri() ?>/img/icon-m-1.svg" alt="">
+            <span><img src="<?= get_stylesheet_directory_uri() ?>/img/icon-m-2.svg" alt=""></span>
           </a>
         </div>
       <?php endif ?>

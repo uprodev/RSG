@@ -169,7 +169,7 @@ if($args['row']):
                   </div>
                 <?php endif ?>
                 
-                <div class="form-wrap">
+                <div class="form-wrap-1">
 
                   <?php if ($title): ?>
                     <h3><?= $title ?></h3>

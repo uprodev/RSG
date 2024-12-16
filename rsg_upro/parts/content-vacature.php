@@ -31,6 +31,12 @@ $link_target = isset($args['link']) && $args['link'] && $args['link']['target'] 
 
     </figure>
   <?php endif ?>
+
+  <?php if ($link_url): ?>
+    <div class="icon-wrap">
+      <a href="<?= $link_url ?>"<?= $link_target ?>><i class="fa-regular fa-arrow-right"></i></a>
+    </div>
+  <?php endif ?>
   
   <div class="text">
     <?php if ($label): ?>

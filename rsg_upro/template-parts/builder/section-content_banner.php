@@ -6,18 +6,17 @@ if($args['row']):
     <div class="wrap-hidden">
     <?php endif ?>
 
-    <section class="home-banner"<?php if($id) echo ' id="' . $id . '"' ?>>
-      <div class="bg"></div>
+    <section class="text-img text-img-4x"<?php if($id) echo ' id="' . $id . '"' ?>>
       <div class="container">
-        <div class="row justify-content-between align-items-center">
-          <div class="text">
+        <div class="row align-items-center">
+          <div class="text col-12 col-lg-6">
 
             <?php if ($subtitle): ?>
               <h6 class="label"><?= $subtitle ?></h6>
             <?php endif ?>
 
             <?php if ($title): ?>
-              <h1><?= $title ?></h1>
+              <h2><?= $title ?></h2>
             <?php endif ?>
 
             <?= $text ?>
@@ -30,14 +29,14 @@ if($args['row']):
                 <?php endif ?>
 
                 <?php if ($secondary_link): ?>
-                  <a href="<?= $secondary_link['url'] ?>" class="link"<?php if($secondary_link['target']) echo ' target="_blank"' ?>><?= html_entity_decode($secondary_link['title']) ?></a>
+                  <a href="<?= $secondary_link['url'] ?>" class="link link-orange"<?php if($secondary_link['target']) echo ' target="_blank"' ?>><?= html_entity_decode($secondary_link['title']) ?></a>
                 <?php endif ?>
 
               </div>
             <?php endif ?>
 
           </div>
-          <figure class="d-flex justify-content-center flex-wrap">
+          <figure class="d-flex justify-content-center flex-wrap img-4x col-12 col-lg-6">
 
             <?php if ($top_left_image): ?>
               <div class="img img-1">
@@ -83,60 +82,12 @@ if($args['row']):
               
             </div>
           </figure>
-
-          <?php if ($is_show_cards && is_array($cards) && checkArrayForValues($cards)): ?>
-          <div class="bottom d-flex justify-content-between flex-wrap w-100">
-
-            <?php foreach ($cards as $index => $item): ?>
-              <div class="item item-<?= $index + 1 ?>">
-
-                <?php if ($item['icon']): ?>
-                  <div class="icon-wrap">
-                    <i class="<?= $item['icon'] ?>"></i>
-                  </div>
-                <?php endif ?>
-
-                <div class="info">
-
-                  <?php if ($item['title']): ?>
-                    <h3 class="title"><?= $item['title'] ?></h3>
-                  <?php endif ?>
-
-                  <?php if ($item['text']): ?>
-                    <p><?= $item['text'] ?></p>
-                  <?php endif ?>
-
-                </div>
-
-                <?php if (is_array($item['links']) && checkArrayForValues($item['links'])): ?>
-                <ul>
-
-                  <?php foreach ($item['links'] as $item_2): ?>
-                    <?php if ($item_2['link']): ?>
-                      <li>
-                        <a href="<?= $item_2['link']['url'] ?>"<?php if($item_2['link']['target']) echo ' target="_blank"' ?>>
-                          <i class="fa-regular fa-arrow-right"></i>
-                          <?= html_entity_decode($item_2['link']['title']) ?>
-                        </a>
-                      </li>
-                    <?php endif ?>
-                  <?php endforeach ?>
-
-                </ul>
-              <?php endif ?>
-
-            </div>
-          <?php endforeach ?>
-
         </div>
-      <?php endif ?>
+      </div>
+    </section>
 
+    <?php if ($args['index'] == 0): ?>
     </div>
-  </div>
-</section>
+  <?php endif ?>
 
-<?php if ($args['index'] == 0): ?>
-</div>
-<?php endif ?>
-
-<?php endif; ?>
+  <?php endif; ?>
